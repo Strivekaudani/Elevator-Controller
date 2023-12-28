@@ -1,0 +1,2079 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 20
+        -max_paths 20
+        -sort_by group
+Design : elevator_fsm
+Version: O-2018.06-SP1
+Date   : Sun Nov  5 20:11:38 2023
+****************************************
+
+Operating Conditions: slow   Library: IBM_CMOS8HP_SS125
+Wire Load Model Mode: enclosed
+
+  Startpoint: floor_three_down_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_0  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_three_down_button/button_out_reg/CLK (DFFR_E)    0.000      3.000 r
+  floor_three_down_button/button_out_reg/Q (DFFR_E)      0.305      3.305 r
+  floor_three_down_button/U6/Z (INVERT_H)                0.055      3.360 f
+  floor_three_down_button/U4/Z (INVERT_L)                0.056      3.416 r
+  floor_three_down_button/button_out (elevator_button_0)
+                                                         0.000      3.416 r
+  U190/Z (INVERT_I)                                      0.051      3.466 f
+  U182/Z (AND2_H)                                        0.075      3.541 f
+  U183/Z (INVERT_D)                                      0.056      3.597 r
+  U83/Z (INVERT_E)                                       0.052      3.649 f
+  U181/Z (INVERT_E)                                      0.058      3.707 r
+  U144/Z (INVERT_H)                                      0.050      3.757 f
+  U147/Z (INVERT_K)                                      0.049      3.805 r
+  U235/Z (INVERT_E)                                      0.047      3.852 f
+  U237/Z (NOR2_C)                                        0.079      3.931 r
+  U238/Z (INVERT_E)                                      0.061      3.992 f
+  U101/Z (NOR2_D)                                        0.067      4.059 r
+  U234/Z (INVERT_F)                                      0.059      4.118 f
+  U136/Z (INVERT_F)                                      0.059      4.177 r
+  U132/Z (NOR2_C)                                        0.083      4.261 f
+  U133/Z (NOR2_C)                                        0.095      4.356 r
+  U87/Z (INVERT_E)                                       0.056      4.412 f
+  U116/Z (OA222_E)                                       0.175      4.587 f
+  U117/Z (CLKI_I)                                        0.109      4.697 r
+  U95/Z (INVERT_D)                                       0.045      4.742 f
+  U24/Z (NAND2_D)                                        0.070      4.811 r
+  state_current_reg[0]/D (DFFR_E)                        0.000      4.811 r
+  data arrival time                                                 4.811
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            3.000     13.000
+  clock uncertainty                                     -0.700     12.300
+  state_current_reg[0]/CLK (DFFR_E)                      0.000     12.300 r
+  library setup time                                    -0.106     12.194
+  data required time                                               12.194
+  --------------------------------------------------------------------------
+  data required time                                               12.194
+  data arrival time                                                -4.811
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.383
+
+
+  Startpoint: floor_three_down_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_0  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_three_down_button/button_out_reg/CLK (DFFR_E)    0.000      3.000 r
+  floor_three_down_button/button_out_reg/Q (DFFR_E)      0.305      3.305 r
+  floor_three_down_button/U6/Z (INVERT_H)                0.055      3.360 f
+  floor_three_down_button/U4/Z (INVERT_L)                0.056      3.416 r
+  floor_three_down_button/button_out (elevator_button_0)
+                                                         0.000      3.416 r
+  U190/Z (INVERT_I)                                      0.051      3.466 f
+  U182/Z (AND2_H)                                        0.075      3.541 f
+  U183/Z (INVERT_D)                                      0.056      3.597 r
+  U83/Z (INVERT_E)                                       0.052      3.649 f
+  U181/Z (INVERT_E)                                      0.058      3.707 r
+  U144/Z (INVERT_H)                                      0.050      3.757 f
+  U147/Z (INVERT_K)                                      0.049      3.805 r
+  U235/Z (INVERT_E)                                      0.047      3.852 f
+  U237/Z (NOR2_C)                                        0.079      3.931 r
+  U238/Z (INVERT_E)                                      0.061      3.992 f
+  U101/Z (NOR2_D)                                        0.067      4.059 r
+  U234/Z (INVERT_F)                                      0.059      4.118 f
+  U136/Z (INVERT_F)                                      0.059      4.177 r
+  U131/Z (NOR2_C)                                        0.083      4.261 f
+  U133/Z (NOR2_C)                                        0.089      4.350 r
+  U87/Z (INVERT_E)                                       0.056      4.406 f
+  U116/Z (OA222_E)                                       0.175      4.581 f
+  U117/Z (CLKI_I)                                        0.109      4.691 r
+  U95/Z (INVERT_D)                                       0.045      4.735 f
+  U24/Z (NAND2_D)                                        0.070      4.805 r
+  state_current_reg[0]/D (DFFR_E)                        0.000      4.805 r
+  data arrival time                                                 4.805
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            3.000     13.000
+  clock uncertainty                                     -0.700     12.300
+  state_current_reg[0]/CLK (DFFR_E)                      0.000     12.300 r
+  library setup time                                    -0.106     12.194
+  data required time                                               12.194
+  --------------------------------------------------------------------------
+  data required time                                               12.194
+  data arrival time                                                -4.805
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.389
+
+
+  Startpoint: floor_three_down_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_0  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_three_down_button/button_out_reg/CLK (DFFR_E)    0.000      3.000 r
+  floor_three_down_button/button_out_reg/Q (DFFR_E)      0.197      3.197 f
+  floor_three_down_button/U6/Z (INVERT_H)                0.060      3.258 r
+  floor_three_down_button/U4/Z (INVERT_L)                0.050      3.308 f
+  floor_three_down_button/button_out (elevator_button_0)
+                                                         0.000      3.308 f
+  U190/Z (INVERT_I)                                      0.056      3.363 r
+  U182/Z (AND2_H)                                        0.071      3.435 r
+  U183/Z (INVERT_D)                                      0.050      3.484 f
+  U83/Z (INVERT_E)                                       0.053      3.538 r
+  U181/Z (INVERT_E)                                      0.055      3.592 f
+  U144/Z (INVERT_H)                                      0.056      3.648 r
+  U147/Z (INVERT_K)                                      0.044      3.691 f
+  U235/Z (INVERT_E)                                      0.048      3.740 r
+  U237/Z (NOR2_C)                                        0.073      3.813 f
+  U238/Z (INVERT_E)                                      0.066      3.878 r
+  U101/Z (NOR2_D)                                        0.061      3.939 f
+  U234/Z (INVERT_F)                                      0.065      4.004 r
+  U136/Z (INVERT_F)                                      0.055      4.058 f
+  U132/Z (NOR2_C)                                        0.087      4.145 r
+  U133/Z (NOR2_C)                                        0.094      4.239 f
+  U87/Z (INVERT_E)                                       0.061      4.300 r
+  U116/Z (OA222_E)                                       0.131      4.432 r
+  U117/Z (CLKI_I)                                        0.119      4.551 f
+  U95/Z (INVERT_D)                                       0.054      4.604 r
+  U24/Z (NAND2_D)                                        0.054      4.659 f
+  state_current_reg[0]/D (DFFR_E)                        0.000      4.659 f
+  data arrival time                                                 4.659
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            3.000     13.000
+  clock uncertainty                                     -0.700     12.300
+  state_current_reg[0]/CLK (DFFR_E)                      0.000     12.300 r
+  library setup time                                    -0.236     12.064
+  data required time                                               12.064
+  --------------------------------------------------------------------------
+  data required time                                               12.064
+  data arrival time                                                -4.659
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.405
+
+
+  Startpoint: floor_three_down_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_0  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_three_down_button/button_out_reg/CLK (DFFR_E)    0.000      3.000 r
+  floor_three_down_button/button_out_reg/Q (DFFR_E)      0.197      3.197 f
+  floor_three_down_button/U6/Z (INVERT_H)                0.060      3.258 r
+  floor_three_down_button/U4/Z (INVERT_L)                0.050      3.308 f
+  floor_three_down_button/button_out (elevator_button_0)
+                                                         0.000      3.308 f
+  U190/Z (INVERT_I)                                      0.056      3.363 r
+  U182/Z (AND2_H)                                        0.071      3.435 r
+  U183/Z (INVERT_D)                                      0.050      3.484 f
+  U83/Z (INVERT_E)                                       0.053      3.538 r
+  U181/Z (INVERT_E)                                      0.055      3.592 f
+  U144/Z (INVERT_H)                                      0.056      3.648 r
+  U147/Z (INVERT_K)                                      0.044      3.691 f
+  U235/Z (INVERT_E)                                      0.048      3.740 r
+  U237/Z (NOR2_C)                                        0.073      3.813 f
+  U238/Z (INVERT_E)                                      0.066      3.878 r
+  U101/Z (NOR2_D)                                        0.061      3.939 f
+  U234/Z (INVERT_F)                                      0.065      4.004 r
+  U136/Z (INVERT_F)                                      0.055      4.058 f
+  U131/Z (NOR2_C)                                        0.087      4.145 r
+  U133/Z (NOR2_C)                                        0.085      4.229 f
+  U87/Z (INVERT_E)                                       0.061      4.291 r
+  U116/Z (OA222_E)                                       0.131      4.422 r
+  U117/Z (CLKI_I)                                        0.119      4.541 f
+  U95/Z (INVERT_D)                                       0.054      4.595 r
+  U24/Z (NAND2_D)                                        0.054      4.649 f
+  state_current_reg[0]/D (DFFR_E)                        0.000      4.649 f
+  data arrival time                                                 4.649
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            3.000     13.000
+  clock uncertainty                                     -0.700     12.300
+  state_current_reg[0]/CLK (DFFR_E)                      0.000     12.300 r
+  library setup time                                    -0.236     12.064
+  data required time                                               12.064
+  --------------------------------------------------------------------------
+  data required time                                               12.064
+  data arrival time                                                -4.649
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.414
+
+
+  Startpoint: floor_three_down_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_0  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_three_down_button/button_out_reg/CLK (DFFR_E)    0.000      3.000 r
+  floor_three_down_button/button_out_reg/Q (DFFR_E)      0.305      3.305 r
+  floor_three_down_button/U6/Z (INVERT_H)                0.055      3.360 f
+  floor_three_down_button/U4/Z (INVERT_L)                0.056      3.416 r
+  floor_three_down_button/button_out (elevator_button_0)
+                                                         0.000      3.416 r
+  U190/Z (INVERT_I)                                      0.051      3.466 f
+  U182/Z (AND2_H)                                        0.075      3.541 f
+  U183/Z (INVERT_D)                                      0.056      3.597 r
+  U83/Z (INVERT_E)                                       0.052      3.649 f
+  U181/Z (INVERT_E)                                      0.058      3.707 r
+  U144/Z (INVERT_H)                                      0.050      3.757 f
+  U147/Z (INVERT_K)                                      0.049      3.805 r
+  U148/Z (OA21_F)                                        0.104      3.909 r
+  U149/Z (INVERT_D)                                      0.053      3.962 f
+  U76/Z (INVERT_E)                                       0.052      4.014 r
+  U197/Z (NOR2_C)                                        0.072      4.086 f
+  U194/Z (NOR2_C)                                        0.090      4.176 r
+  U140/Z (OA21_F)                                        0.114      4.290 r
+  U141/Z (INVERT_D)                                      0.050      4.340 f
+  U142/Z (OA21_F)                                        0.110      4.449 f
+  U143/Z (INVERT_D)                                      0.055      4.505 r
+  U279/Z (OAI21_B)                                       0.052      4.557 f
+  state_current_reg[2]/D (DFFR_E)                        0.000      4.557 f
+  data arrival time                                                 4.557
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            3.000     13.000
+  clock uncertainty                                     -0.700     12.300
+  state_current_reg[2]/CLK (DFFR_E)                      0.000     12.300 r
+  library setup time                                    -0.244     12.056
+  data required time                                               12.056
+  --------------------------------------------------------------------------
+  data required time                                               12.056
+  data arrival time                                                -4.557
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.499
+
+
+  Startpoint: floor_three_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_4  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_three_button/button_out_reg/CLK (DFFR_E)         0.000      3.000 r
+  floor_three_button/button_out_reg/QBAR (DFFR_E)        0.162      3.162 r
+  floor_three_button/U5/Z (INVERT_I)                     0.051      3.213 f
+  floor_three_button/button_out (elevator_button_4)      0.000      3.213 f
+  U161/Z (INVERT_J)                                      0.051      3.264 r
+  U182/Z (AND2_H)                                        0.072      3.336 r
+  U183/Z (INVERT_D)                                      0.050      3.385 f
+  U83/Z (INVERT_E)                                       0.053      3.439 r
+  U181/Z (INVERT_E)                                      0.055      3.493 f
+  U144/Z (INVERT_H)                                      0.056      3.549 r
+  U147/Z (INVERT_K)                                      0.044      3.593 f
+  U235/Z (INVERT_E)                                      0.048      3.641 r
+  U237/Z (NOR2_C)                                        0.073      3.714 f
+  U238/Z (INVERT_E)                                      0.066      3.780 r
+  U101/Z (NOR2_D)                                        0.061      3.840 f
+  U234/Z (INVERT_F)                                      0.065      3.905 r
+  U136/Z (INVERT_F)                                      0.055      3.959 f
+  U132/Z (NOR2_C)                                        0.087      4.046 r
+  U133/Z (NOR2_C)                                        0.094      4.140 f
+  U87/Z (INVERT_E)                                       0.061      4.202 r
+  U116/Z (OA222_E)                                       0.131      4.333 r
+  U117/Z (CLKI_I)                                        0.119      4.452 f
+  U95/Z (INVERT_D)                                       0.054      4.506 r
+  U24/Z (NAND2_D)                                        0.054      4.560 f
+  state_current_reg[0]/D (DFFR_E)                        0.000      4.560 f
+  data arrival time                                                 4.560
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            3.000     13.000
+  clock uncertainty                                     -0.700     12.300
+  state_current_reg[0]/CLK (DFFR_E)                      0.000     12.300 r
+  library setup time                                    -0.236     12.064
+  data required time                                               12.064
+  --------------------------------------------------------------------------
+  data required time                                               12.064
+  data arrival time                                                -4.560
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.504
+
+
+  Startpoint: floor_three_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_4  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_three_button/button_out_reg/CLK (DFFR_E)         0.000      3.000 r
+  floor_three_button/button_out_reg/QBAR (DFFR_E)        0.229      3.229 f
+  floor_three_button/U5/Z (INVERT_I)                     0.061      3.290 r
+  floor_three_button/button_out (elevator_button_4)      0.000      3.290 r
+  U161/Z (INVERT_J)                                      0.046      3.336 f
+  U182/Z (AND2_H)                                        0.080      3.415 f
+  U183/Z (INVERT_D)                                      0.056      3.471 r
+  U83/Z (INVERT_E)                                       0.052      3.523 f
+  U181/Z (INVERT_E)                                      0.058      3.581 r
+  U144/Z (INVERT_H)                                      0.050      3.631 f
+  U147/Z (INVERT_K)                                      0.049      3.680 r
+  U235/Z (INVERT_E)                                      0.047      3.726 f
+  U237/Z (NOR2_C)                                        0.079      3.805 r
+  U238/Z (INVERT_E)                                      0.061      3.866 f
+  U101/Z (NOR2_D)                                        0.067      3.934 r
+  U234/Z (INVERT_F)                                      0.059      3.992 f
+  U136/Z (INVERT_F)                                      0.059      4.052 r
+  U132/Z (NOR2_C)                                        0.083      4.135 f
+  U133/Z (NOR2_C)                                        0.095      4.230 r
+  U87/Z (INVERT_E)                                       0.056      4.286 f
+  U116/Z (OA222_E)                                       0.175      4.462 f
+  U117/Z (CLKI_I)                                        0.109      4.571 r
+  U95/Z (INVERT_D)                                       0.045      4.616 f
+  U24/Z (NAND2_D)                                        0.070      4.686 r
+  state_current_reg[0]/D (DFFR_E)                        0.000      4.686 r
+  data arrival time                                                 4.686
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            3.000     13.000
+  clock uncertainty                                     -0.700     12.300
+  state_current_reg[0]/CLK (DFFR_E)                      0.000     12.300 r
+  library setup time                                    -0.106     12.194
+  data required time                                               12.194
+  --------------------------------------------------------------------------
+  data required time                                               12.194
+  data arrival time                                                -4.686
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.508
+
+
+  Startpoint: floor_three_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_4  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_three_button/button_out_reg/CLK (DFFR_E)         0.000      3.000 r
+  floor_three_button/button_out_reg/QBAR (DFFR_E)        0.162      3.162 r
+  floor_three_button/U5/Z (INVERT_I)                     0.051      3.213 f
+  floor_three_button/button_out (elevator_button_4)      0.000      3.213 f
+  U161/Z (INVERT_J)                                      0.051      3.264 r
+  U182/Z (AND2_H)                                        0.072      3.336 r
+  U183/Z (INVERT_D)                                      0.050      3.385 f
+  U83/Z (INVERT_E)                                       0.053      3.439 r
+  U181/Z (INVERT_E)                                      0.055      3.493 f
+  U144/Z (INVERT_H)                                      0.056      3.549 r
+  U147/Z (INVERT_K)                                      0.044      3.593 f
+  U235/Z (INVERT_E)                                      0.048      3.641 r
+  U237/Z (NOR2_C)                                        0.073      3.714 f
+  U238/Z (INVERT_E)                                      0.066      3.780 r
+  U101/Z (NOR2_D)                                        0.061      3.840 f
+  U234/Z (INVERT_F)                                      0.065      3.905 r
+  U136/Z (INVERT_F)                                      0.055      3.959 f
+  U131/Z (NOR2_C)                                        0.087      4.046 r
+  U133/Z (NOR2_C)                                        0.085      4.131 f
+  U87/Z (INVERT_E)                                       0.061      4.192 r
+  U116/Z (OA222_E)                                       0.131      4.323 r
+  U117/Z (CLKI_I)                                        0.119      4.442 f
+  U95/Z (INVERT_D)                                       0.054      4.496 r
+  U24/Z (NAND2_D)                                        0.054      4.550 f
+  state_current_reg[0]/D (DFFR_E)                        0.000      4.551 f
+  data arrival time                                                 4.551
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            3.000     13.000
+  clock uncertainty                                     -0.700     12.300
+  state_current_reg[0]/CLK (DFFR_E)                      0.000     12.300 r
+  library setup time                                    -0.236     12.064
+  data required time                                               12.064
+  --------------------------------------------------------------------------
+  data required time                                               12.064
+  data arrival time                                                -4.551
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.513
+
+
+  Startpoint: floor_three_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_4  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_three_button/button_out_reg/CLK (DFFR_E)         0.000      3.000 r
+  floor_three_button/button_out_reg/QBAR (DFFR_E)        0.229      3.229 f
+  floor_three_button/U5/Z (INVERT_I)                     0.061      3.290 r
+  floor_three_button/button_out (elevator_button_4)      0.000      3.290 r
+  U161/Z (INVERT_J)                                      0.046      3.336 f
+  U182/Z (AND2_H)                                        0.080      3.415 f
+  U183/Z (INVERT_D)                                      0.056      3.471 r
+  U83/Z (INVERT_E)                                       0.052      3.523 f
+  U181/Z (INVERT_E)                                      0.058      3.581 r
+  U144/Z (INVERT_H)                                      0.050      3.631 f
+  U147/Z (INVERT_K)                                      0.049      3.680 r
+  U235/Z (INVERT_E)                                      0.047      3.726 f
+  U237/Z (NOR2_C)                                        0.079      3.805 r
+  U238/Z (INVERT_E)                                      0.061      3.866 f
+  U101/Z (NOR2_D)                                        0.067      3.934 r
+  U234/Z (INVERT_F)                                      0.059      3.992 f
+  U136/Z (INVERT_F)                                      0.059      4.052 r
+  U131/Z (NOR2_C)                                        0.083      4.135 f
+  U133/Z (NOR2_C)                                        0.089      4.224 r
+  U87/Z (INVERT_E)                                       0.056      4.280 f
+  U116/Z (OA222_E)                                       0.175      4.455 f
+  U117/Z (CLKI_I)                                        0.109      4.565 r
+  U95/Z (INVERT_D)                                       0.045      4.610 f
+  U24/Z (NAND2_D)                                        0.070      4.679 r
+  state_current_reg[0]/D (DFFR_E)                        0.000      4.679 r
+  data arrival time                                                 4.679
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            3.000     13.000
+  clock uncertainty                                     -0.700     12.300
+  state_current_reg[0]/CLK (DFFR_E)                      0.000     12.300 r
+  library setup time                                    -0.106     12.194
+  data required time                                               12.194
+  --------------------------------------------------------------------------
+  data required time                                               12.194
+  data arrival time                                                -4.679
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.515
+
+
+  Startpoint: floor_three_down_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_0  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_three_down_button/button_out_reg/CLK (DFFR_E)    0.000      3.000 r
+  floor_three_down_button/button_out_reg/Q (DFFR_E)      0.305      3.305 r
+  floor_three_down_button/U6/Z (INVERT_H)                0.055      3.360 f
+  floor_three_down_button/U4/Z (INVERT_L)                0.056      3.416 r
+  floor_three_down_button/button_out (elevator_button_0)
+                                                         0.000      3.416 r
+  U190/Z (INVERT_I)                                      0.051      3.466 f
+  U182/Z (AND2_H)                                        0.075      3.541 f
+  U183/Z (INVERT_D)                                      0.056      3.597 r
+  U83/Z (INVERT_E)                                       0.052      3.649 f
+  U181/Z (INVERT_E)                                      0.058      3.707 r
+  U144/Z (INVERT_H)                                      0.050      3.757 f
+  U147/Z (INVERT_K)                                      0.049      3.805 r
+  U145/Z (NOR2_C)                                        0.071      3.876 f
+  U146/Z (NOR2_C)                                        0.087      3.963 r
+  U195/Z (NOR2_C)                                        0.083      4.046 f
+  U194/Z (NOR2_C)                                        0.084      4.131 r
+  U140/Z (OA21_F)                                        0.114      4.245 r
+  U141/Z (INVERT_D)                                      0.050      4.294 f
+  U142/Z (OA21_F)                                        0.110      4.404 f
+  U143/Z (INVERT_D)                                      0.055      4.459 r
+  U279/Z (OAI21_B)                                       0.052      4.511 f
+  state_current_reg[2]/D (DFFR_E)                        0.000      4.511 f
+  data arrival time                                                 4.511
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            3.000     13.000
+  clock uncertainty                                     -0.700     12.300
+  state_current_reg[2]/CLK (DFFR_E)                      0.000     12.300 r
+  library setup time                                    -0.244     12.056
+  data required time                                               12.056
+  --------------------------------------------------------------------------
+  data required time                                               12.056
+  data arrival time                                                -4.511
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.544
+
+
+  Startpoint: floor_three_down_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_0  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_three_down_button/button_out_reg/CLK (DFFR_E)    0.000      3.000 r
+  floor_three_down_button/button_out_reg/Q (DFFR_E)      0.305      3.305 r
+  floor_three_down_button/U6/Z (INVERT_H)                0.055      3.360 f
+  floor_three_down_button/U4/Z (INVERT_L)                0.056      3.416 r
+  floor_three_down_button/button_out (elevator_button_0)
+                                                         0.000      3.416 r
+  U190/Z (INVERT_I)                                      0.051      3.466 f
+  U182/Z (AND2_H)                                        0.075      3.541 f
+  U183/Z (INVERT_D)                                      0.056      3.597 r
+  U83/Z (INVERT_E)                                       0.052      3.649 f
+  U181/Z (INVERT_E)                                      0.058      3.707 r
+  U144/Z (INVERT_H)                                      0.050      3.757 f
+  U147/Z (INVERT_K)                                      0.049      3.805 r
+  U193/Z (INVERT_D)                                      0.052      3.858 f
+  U192/Z (AO222_F)                                       0.131      3.989 f
+  U124/Z (INVERT_E)                                      0.053      4.042 r
+  U126/Z (NOR2_C)                                        0.082      4.124 f
+  U127/Z (INVERT_E)                                      0.062      4.186 r
+  U123/Z (NOR2_C)                                        0.082      4.268 f
+  U121/Z (NOR2_C)                                        0.095      4.364 r
+  U122/Z (INVERT_E)                                      0.055      4.419 f
+  U94/Z (OR2_H)                                          0.096      4.515 f
+  state_current_reg[1]/D (DFFR_E)                        0.000      4.515 f
+  data arrival time                                                 4.515
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            3.000     13.000
+  clock uncertainty                                     -0.700     12.300
+  state_current_reg[1]/CLK (DFFR_E)                      0.000     12.300 r
+  library setup time                                    -0.234     12.066
+  data required time                                               12.066
+  --------------------------------------------------------------------------
+  data required time                                               12.066
+  data arrival time                                                -4.515
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.551
+
+
+  Startpoint: state_current_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[0]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[0]/Q (DFFR_E)         0.305      3.305 r
+  U273/Z (INVERT_H)                       0.055      3.360 f
+  U241/Z (INVERT_L)                       0.056      3.416 r
+  U278/Z (INVERT_F)                       0.048      3.463 f
+  U104/Z (INVERT_I)                       0.051      3.515 r
+  U270/Z (INVERT_E)                       0.052      3.567 f
+  U231/Z (AND2_I)                         0.082      3.649 f
+  U232/Z (INVERT_F)                       0.053      3.702 r
+  U233/Z (OR2_I)                          0.077      3.779 r
+  U275/Z (INVERT_H)                       0.035      3.814 f
+  U82/Z (INVERT_I)                        0.052      3.866 r
+  U134/Z (INVERT_H)                       0.049      3.915 f
+  U132/Z (NOR2_C)                         0.078      3.993 r
+  U133/Z (NOR2_C)                         0.094      4.087 f
+  U87/Z (INVERT_E)                        0.061      4.148 r
+  U116/Z (OA222_E)                        0.131      4.279 r
+  U117/Z (CLKI_I)                         0.119      4.398 f
+  U95/Z (INVERT_D)                        0.054      4.452 r
+  U24/Z (NAND2_D)                         0.054      4.506 f
+  state_current_reg[0]/D (DFFR_E)         0.000      4.506 f
+  data arrival time                                  4.506
+
+  clock clk (rise edge)                  10.000     10.000
+  clock network delay (ideal)             3.000     13.000
+  clock uncertainty                      -0.700     12.300
+  state_current_reg[0]/CLK (DFFR_E)       0.000     12.300 r
+  library setup time                     -0.236     12.064
+  data required time                                12.064
+  -----------------------------------------------------------
+  data required time                                12.064
+  data arrival time                                 -4.506
+  -----------------------------------------------------------
+  slack (MET)                                        7.557
+
+
+  Startpoint: floor_one_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_6  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_one_button/button_out_reg/CLK (DFFR_E)           0.000      3.000 r
+  floor_one_button/button_out_reg/Q (DFFR_E)             0.315      3.315 r
+  floor_one_button/U6/Z (INVERT_I)                       0.055      3.370 f
+  floor_one_button/U3/Z (INVERT_N)                       0.054      3.424 r
+  floor_one_button/button_out (elevator_button_6)        0.000      3.424 r
+  U253/Z (NOR2_C)                                        0.083      3.507 f
+  U236/Z (INVERT_E)                                      0.062      3.569 r
+  U237/Z (NOR2_C)                                        0.084      3.653 f
+  U238/Z (INVERT_E)                                      0.066      3.719 r
+  U101/Z (NOR2_D)                                        0.061      3.779 f
+  U234/Z (INVERT_F)                                      0.065      3.844 r
+  U136/Z (INVERT_F)                                      0.055      3.899 f
+  U132/Z (NOR2_C)                                        0.087      3.985 r
+  U133/Z (NOR2_C)                                        0.094      4.079 f
+  U87/Z (INVERT_E)                                       0.061      4.141 r
+  U116/Z (OA222_E)                                       0.131      4.272 r
+  U117/Z (CLKI_I)                                        0.119      4.391 f
+  U95/Z (INVERT_D)                                       0.054      4.445 r
+  U24/Z (NAND2_D)                                        0.054      4.499 f
+  state_current_reg[0]/D (DFFR_E)                        0.000      4.499 f
+  data arrival time                                                 4.499
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            3.000     13.000
+  clock uncertainty                                     -0.700     12.300
+  state_current_reg[0]/CLK (DFFR_E)                      0.000     12.300 r
+  library setup time                                    -0.236     12.064
+  data required time                                               12.064
+  --------------------------------------------------------------------------
+  data required time                                               12.064
+  data arrival time                                                -4.499
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.564
+
+
+  Startpoint: floor_one_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_6  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_one_button/button_out_reg/CLK (DFFR_E)           0.000      3.000 r
+  floor_one_button/button_out_reg/Q (DFFR_E)             0.315      3.315 r
+  floor_one_button/U6/Z (INVERT_I)                       0.055      3.370 f
+  floor_one_button/U3/Z (INVERT_N)                       0.054      3.424 r
+  floor_one_button/button_out (elevator_button_6)        0.000      3.424 r
+  U253/Z (NOR2_C)                                        0.083      3.507 f
+  U236/Z (INVERT_E)                                      0.062      3.569 r
+  U237/Z (NOR2_C)                                        0.084      3.653 f
+  U238/Z (INVERT_E)                                      0.066      3.719 r
+  U101/Z (NOR2_D)                                        0.061      3.779 f
+  U234/Z (INVERT_F)                                      0.065      3.844 r
+  U136/Z (INVERT_F)                                      0.055      3.899 f
+  U131/Z (NOR2_C)                                        0.087      3.985 r
+  U133/Z (NOR2_C)                                        0.085      4.070 f
+  U87/Z (INVERT_E)                                       0.061      4.131 r
+  U116/Z (OA222_E)                                       0.131      4.263 r
+  U117/Z (CLKI_I)                                        0.119      4.381 f
+  U95/Z (INVERT_D)                                       0.054      4.435 r
+  U24/Z (NAND2_D)                                        0.054      4.490 f
+  state_current_reg[0]/D (DFFR_E)                        0.000      4.490 f
+  data arrival time                                                 4.490
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            3.000     13.000
+  clock uncertainty                                     -0.700     12.300
+  state_current_reg[0]/CLK (DFFR_E)                      0.000     12.300 r
+  library setup time                                    -0.236     12.064
+  data required time                                               12.064
+  --------------------------------------------------------------------------
+  data required time                                               12.064
+  data arrival time                                                -4.490
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.574
+
+
+  Startpoint: floor_two_up_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_2  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_two_up_button/button_out_reg/CLK (DFFR_E)        0.000      3.000 r
+  floor_two_up_button/button_out_reg/Q (DFFR_E)          0.305      3.305 r
+  floor_two_up_button/U6/Z (INVERT_H)                    0.053      3.358 f
+  floor_two_up_button/U3/Z (INVERT_K)                    0.048      3.406 r
+  floor_two_up_button/button_out (elevator_button_2)     0.000      3.406 r
+  U276/Z (NOR2_H)                                        0.078      3.484 f
+  U154/Z (INVERT_D)                                      0.069      3.553 r
+  U239/Z (NOR2_C)                                        0.077      3.630 f
+  U240/Z (INVERT_E)                                      0.066      3.696 r
+  U101/Z (NOR2_D)                                        0.069      3.764 f
+  U234/Z (INVERT_F)                                      0.065      3.829 r
+  U136/Z (INVERT_F)                                      0.055      3.884 f
+  U132/Z (NOR2_C)                                        0.087      3.970 r
+  U133/Z (NOR2_C)                                        0.094      4.064 f
+  U87/Z (INVERT_E)                                       0.061      4.126 r
+  U116/Z (OA222_E)                                       0.131      4.257 r
+  U117/Z (CLKI_I)                                        0.119      4.376 f
+  U95/Z (INVERT_D)                                       0.054      4.430 r
+  U24/Z (NAND2_D)                                        0.054      4.484 f
+  state_current_reg[0]/D (DFFR_E)                        0.000      4.484 f
+  data arrival time                                                 4.484
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            3.000     13.000
+  clock uncertainty                                     -0.700     12.300
+  state_current_reg[0]/CLK (DFFR_E)                      0.000     12.300 r
+  library setup time                                    -0.236     12.064
+  data required time                                               12.064
+  --------------------------------------------------------------------------
+  data required time                                               12.064
+  data arrival time                                                -4.484
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.579
+
+
+  Startpoint: floor_two_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_5  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_two_button/button_out_reg/CLK (DFFR_E)           0.000      3.000 r
+  floor_two_button/button_out_reg/Q (DFFR_E)             0.315      3.315 r
+  floor_two_button/U5/Z (INVERT_I)                       0.050      3.365 f
+  floor_two_button/U6/Z (INVERT_M)                       0.050      3.415 r
+  floor_two_button/button_out (elevator_button_5)        0.000      3.415 r
+  U253/Z (NOR2_C)                                        0.073      3.488 f
+  U236/Z (INVERT_E)                                      0.062      3.550 r
+  U237/Z (NOR2_C)                                        0.084      3.634 f
+  U238/Z (INVERT_E)                                      0.066      3.700 r
+  U101/Z (NOR2_D)                                        0.061      3.760 f
+  U234/Z (INVERT_F)                                      0.065      3.825 r
+  U136/Z (INVERT_F)                                      0.055      3.880 f
+  U132/Z (NOR2_C)                                        0.087      3.966 r
+  U133/Z (NOR2_C)                                        0.094      4.060 f
+  U87/Z (INVERT_E)                                       0.061      4.122 r
+  U116/Z (OA222_E)                                       0.131      4.253 r
+  U117/Z (CLKI_I)                                        0.119      4.372 f
+  U95/Z (INVERT_D)                                       0.054      4.426 r
+  U24/Z (NAND2_D)                                        0.054      4.480 f
+  state_current_reg[0]/D (DFFR_E)                        0.000      4.480 f
+  data arrival time                                                 4.480
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            3.000     13.000
+  clock uncertainty                                     -0.700     12.300
+  state_current_reg[0]/CLK (DFFR_E)                      0.000     12.300 r
+  library setup time                                    -0.236     12.064
+  data required time                                               12.064
+  --------------------------------------------------------------------------
+  data required time                                               12.064
+  data arrival time                                                -4.480
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.583
+
+
+  Startpoint: floor_two_up_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_2  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_two_up_button/button_out_reg/CLK (DFFR_E)        0.000      3.000 r
+  floor_two_up_button/button_out_reg/Q (DFFR_E)          0.305      3.305 r
+  floor_two_up_button/U6/Z (INVERT_H)                    0.053      3.358 f
+  floor_two_up_button/U3/Z (INVERT_K)                    0.048      3.406 r
+  floor_two_up_button/button_out (elevator_button_2)     0.000      3.406 r
+  U276/Z (NOR2_H)                                        0.078      3.484 f
+  U154/Z (INVERT_D)                                      0.069      3.553 r
+  U239/Z (NOR2_C)                                        0.077      3.630 f
+  U240/Z (INVERT_E)                                      0.066      3.696 r
+  U101/Z (NOR2_D)                                        0.069      3.764 f
+  U234/Z (INVERT_F)                                      0.065      3.829 r
+  U136/Z (INVERT_F)                                      0.055      3.884 f
+  U131/Z (NOR2_C)                                        0.087      3.970 r
+  U133/Z (NOR2_C)                                        0.085      4.055 f
+  U87/Z (INVERT_E)                                       0.061      4.116 r
+  U116/Z (OA222_E)                                       0.131      4.248 r
+  U117/Z (CLKI_I)                                        0.119      4.366 f
+  U95/Z (INVERT_D)                                       0.054      4.420 r
+  U24/Z (NAND2_D)                                        0.054      4.475 f
+  state_current_reg[0]/D (DFFR_E)                        0.000      4.475 f
+  data arrival time                                                 4.475
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            3.000     13.000
+  clock uncertainty                                     -0.700     12.300
+  state_current_reg[0]/CLK (DFFR_E)                      0.000     12.300 r
+  library setup time                                    -0.236     12.064
+  data required time                                               12.064
+  --------------------------------------------------------------------------
+  data required time                                               12.064
+  data arrival time                                                -4.475
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.589
+
+
+  Startpoint: state_current_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[2]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[2]/Q (DFFR_E)         0.305      3.305 r
+  U229/Z (INVERT_H)                       0.045      3.350 f
+  U230/Z (INVERT_I)                       0.048      3.399 r
+  U280/Z (CLK_Q)                          0.090      3.488 r
+  U231/Z (AND2_I)                         0.065      3.553 r
+  U232/Z (INVERT_F)                       0.046      3.600 f
+  U165/Z (AND2_H)                         0.082      3.681 f
+  U166/Z (INVERT_D)                       0.056      3.737 r
+  U75/Z (INVERT_E)                        0.052      3.789 f
+  U214/Z (INVERT_E)                       0.058      3.847 r
+  U170/Z (NAND2BAL_E)                     0.064      3.911 f
+  U169/Z (INVERT_H)                       0.044      3.955 r
+  U113/Z (NAND2BAL_E)                     0.051      4.006 f
+  U112/Z (AOI21_B)                        0.110      4.116 r
+  U116/Z (OA222_E)                        0.130      4.247 r
+  U117/Z (CLKI_I)                         0.119      4.366 f
+  U95/Z (INVERT_D)                        0.054      4.419 r
+  U24/Z (NAND2_D)                         0.054      4.474 f
+  state_current_reg[0]/D (DFFR_E)         0.000      4.474 f
+  data arrival time                                  4.474
+
+  clock clk (rise edge)                  10.000     10.000
+  clock network delay (ideal)             3.000     13.000
+  clock uncertainty                      -0.700     12.300
+  state_current_reg[0]/CLK (DFFR_E)       0.000     12.300 r
+  library setup time                     -0.236     12.064
+  data required time                                12.064
+  -----------------------------------------------------------
+  data required time                                12.064
+  data arrival time                                 -4.474
+  -----------------------------------------------------------
+  slack (MET)                                        7.590
+
+
+  Startpoint: floor_two_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_5  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_two_button/button_out_reg/CLK (DFFR_E)           0.000      3.000 r
+  floor_two_button/button_out_reg/Q (DFFR_E)             0.315      3.315 r
+  floor_two_button/U5/Z (INVERT_I)                       0.050      3.365 f
+  floor_two_button/U6/Z (INVERT_M)                       0.050      3.415 r
+  floor_two_button/button_out (elevator_button_5)        0.000      3.415 r
+  U253/Z (NOR2_C)                                        0.073      3.488 f
+  U236/Z (INVERT_E)                                      0.062      3.550 r
+  U237/Z (NOR2_C)                                        0.084      3.634 f
+  U238/Z (INVERT_E)                                      0.066      3.700 r
+  U101/Z (NOR2_D)                                        0.061      3.760 f
+  U234/Z (INVERT_F)                                      0.065      3.825 r
+  U136/Z (INVERT_F)                                      0.055      3.880 f
+  U131/Z (NOR2_C)                                        0.087      3.966 r
+  U133/Z (NOR2_C)                                        0.085      4.051 f
+  U87/Z (INVERT_E)                                       0.061      4.112 r
+  U116/Z (OA222_E)                                       0.131      4.244 r
+  U117/Z (CLKI_I)                                        0.119      4.362 f
+  U95/Z (INVERT_D)                                       0.054      4.416 r
+  U24/Z (NAND2_D)                                        0.054      4.471 f
+  state_current_reg[0]/D (DFFR_E)                        0.000      4.471 f
+  data arrival time                                                 4.471
+
+  clock clk (rise edge)                                 10.000     10.000
+  clock network delay (ideal)                            3.000     13.000
+  clock uncertainty                                     -0.700     12.300
+  state_current_reg[0]/CLK (DFFR_E)                      0.000     12.300 r
+  library setup time                                    -0.236     12.064
+  data required time                                               12.064
+  --------------------------------------------------------------------------
+  data required time                                               12.064
+  data arrival time                                                -4.471
+  --------------------------------------------------------------------------
+  slack (MET)                                                       7.593
+
+
+  Startpoint: state_current_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: state_current_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[0]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[0]/Q (DFFR_E)         0.197      3.197 f
+  U273/Z (INVERT_H)                       0.060      3.258 r
+  U241/Z (INVERT_L)                       0.050      3.308 f
+  U278/Z (INVERT_F)                       0.051      3.359 r
+  U104/Z (INVERT_I)                       0.046      3.404 f
+  U270/Z (INVERT_E)                       0.054      3.458 r
+  U231/Z (AND2_I)                         0.072      3.530 r
+  U232/Z (INVERT_F)                       0.046      3.576 f
+  U165/Z (AND2_H)                         0.082      3.658 f
+  U166/Z (INVERT_D)                       0.056      3.714 r
+  U75/Z (INVERT_E)                        0.052      3.766 f
+  U214/Z (INVERT_E)                       0.058      3.823 r
+  U170/Z (NAND2BAL_E)                     0.064      3.888 f
+  U169/Z (INVERT_H)                       0.044      3.932 r
+  U113/Z (NAND2BAL_E)                     0.051      3.983 f
+  U112/Z (AOI21_B)                        0.110      4.093 r
+  U116/Z (OA222_E)                        0.130      4.223 r
+  U117/Z (CLKI_I)                         0.119      4.342 f
+  U95/Z (INVERT_D)                        0.054      4.396 r
+  U24/Z (NAND2_D)                         0.054      4.450 f
+  state_current_reg[0]/D (DFFR_E)         0.000      4.451 f
+  data arrival time                                  4.451
+
+  clock clk (rise edge)                  10.000     10.000
+  clock network delay (ideal)             3.000     13.000
+  clock uncertainty                      -0.700     12.300
+  state_current_reg[0]/CLK (DFFR_E)       0.000     12.300 r
+  library setup time                     -0.236     12.064
+  data required time                                12.064
+  -----------------------------------------------------------
+  data required time                                12.064
+  data arrival time                                 -4.451
+  -----------------------------------------------------------
+  slack (MET)                                        7.613
+
+
+  Startpoint: state_current_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[0]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[0]/Q (DFFR_E)         0.305      3.305 r
+  U273/Z (INVERT_H)                       0.055      3.360 f
+  U241/Z (INVERT_L)                       0.056      3.416 r
+  U278/Z (INVERT_F)                       0.048      3.463 f
+  U104/Z (INVERT_I)                       0.051      3.515 r
+  U270/Z (INVERT_E)                       0.052      3.567 f
+  U231/Z (AND2_I)                         0.082      3.649 f
+  U232/Z (INVERT_F)                       0.053      3.702 r
+  U233/Z (OR2_I)                          0.077      3.779 r
+  U275/Z (INVERT_H)                       0.035      3.814 f
+  U82/Z (INVERT_I)                        0.052      3.866 r
+  U179/Z (INVERT_H)                       0.051      3.917 f
+  U164/Z (AOI22_D)                        0.094      4.011 r
+  U163/Z (INVERT_H)                       0.038      4.049 f
+  U261/Z (NOR2_C)                         0.078      4.127 r
+  U262/Z (INVERT_E)                       0.057      4.184 f
+  U260/Z (NOR2_C)                         0.081      4.266 r
+  U259/Z (INVERT_E)                       0.062      4.328 f
+  U90/Z (BUFFER_I)                        0.077      4.404 f
+  U89/Z (INVERT_J)                        0.048      4.452 r
+  U258/Z (INVERT_O)                       0.046      4.498 f
+  elevator_open (out)                     0.002      4.501 f
+  data arrival time                                  4.501
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.501
+  -----------------------------------------------------------
+  slack (MET)                                        3.499
+
+
+  Startpoint: state_current_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[0]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[0]/Q (DFFR_E)         0.305      3.305 r
+  U273/Z (INVERT_H)                       0.055      3.360 f
+  U241/Z (INVERT_L)                       0.056      3.416 r
+  U278/Z (INVERT_F)                       0.048      3.463 f
+  U104/Z (INVERT_I)                       0.051      3.515 r
+  U271/Z (INVERT_F)                       0.050      3.565 f
+  U247/Z (AO22_H)                         0.137      3.702 f
+  U245/Z (INVERT_E)                       0.055      3.758 r
+  U246/Z (INVERT_F)                       0.054      3.811 f
+  U186/Z (OA21_F)                         0.110      3.921 f
+  U187/Z (INVERT_D)                       0.060      3.982 r
+  U81/Z (INVERT_E)                        0.051      4.033 f
+  U261/Z (NOR2_C)                         0.088      4.120 r
+  U262/Z (INVERT_E)                       0.057      4.178 f
+  U260/Z (NOR2_C)                         0.081      4.259 r
+  U259/Z (INVERT_E)                       0.062      4.321 f
+  U90/Z (BUFFER_I)                        0.077      4.397 f
+  U89/Z (INVERT_J)                        0.048      4.445 r
+  U258/Z (INVERT_O)                       0.046      4.492 f
+  elevator_open (out)                     0.002      4.494 f
+  data arrival time                                  4.494
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.494
+  -----------------------------------------------------------
+  slack (MET)                                        3.506
+
+
+  Startpoint: state_current_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[2]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[2]/Q (DFFR_E)         0.305      3.305 r
+  U229/Z (INVERT_H)                       0.045      3.350 f
+  U230/Z (INVERT_I)                       0.048      3.399 r
+  U280/Z (CLK_Q)                          0.090      3.488 r
+  U256/Z (NOR2_H)                         0.076      3.564 f
+  U247/Z (AO22_H)                         0.138      3.702 f
+  U245/Z (INVERT_E)                       0.055      3.757 r
+  U246/Z (INVERT_F)                       0.054      3.811 f
+  U186/Z (OA21_F)                         0.110      3.921 f
+  U187/Z (INVERT_D)                       0.060      3.981 r
+  U81/Z (INVERT_E)                        0.051      4.032 f
+  U261/Z (NOR2_C)                         0.088      4.120 r
+  U262/Z (INVERT_E)                       0.057      4.177 f
+  U260/Z (NOR2_C)                         0.081      4.259 r
+  U259/Z (INVERT_E)                       0.062      4.320 f
+  U90/Z (BUFFER_I)                        0.077      4.397 f
+  U89/Z (INVERT_J)                        0.048      4.445 r
+  U258/Z (INVERT_O)                       0.046      4.491 f
+  elevator_open (out)                     0.002      4.493 f
+  data arrival time                                  4.493
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.493
+  -----------------------------------------------------------
+  slack (MET)                                        3.507
+
+
+  Startpoint: state_current_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[0]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[0]/Q (DFFR_E)         0.305      3.305 r
+  U273/Z (INVERT_H)                       0.055      3.360 f
+  U241/Z (INVERT_L)                       0.056      3.416 r
+  U278/Z (INVERT_F)                       0.048      3.463 f
+  U104/Z (INVERT_I)                       0.051      3.515 r
+  U270/Z (INVERT_E)                       0.052      3.567 f
+  U231/Z (AND2_I)                         0.082      3.649 f
+  U232/Z (INVERT_F)                       0.053      3.702 r
+  U233/Z (OR2_I)                          0.077      3.779 r
+  U275/Z (INVERT_H)                       0.035      3.814 f
+  U82/Z (INVERT_I)                        0.052      3.866 r
+  U179/Z (INVERT_H)                       0.051      3.917 f
+  U265/Z (NAND2_E)                        0.055      3.972 r
+  U100/Z (INVERT_H)                       0.048      4.020 f
+  U263/Z (NOR2_C)                         0.079      4.100 r
+  U264/Z (INVERT_E)                       0.057      4.157 f
+  U260/Z (NOR2_C)                         0.089      4.246 r
+  U259/Z (INVERT_E)                       0.062      4.308 f
+  U90/Z (BUFFER_I)                        0.077      4.385 f
+  U89/Z (INVERT_J)                        0.048      4.432 r
+  U258/Z (INVERT_O)                       0.046      4.479 f
+  elevator_open (out)                     0.002      4.481 f
+  data arrival time                                  4.481
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.481
+  -----------------------------------------------------------
+  slack (MET)                                        3.519
+
+
+  Startpoint: state_current_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[1]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[1]/Q (DFFR_E)         0.315      3.315 r
+  U77/Z (INVERT_I)                        0.055      3.370 f
+  U128/Z (INVERT_N)                       0.055      3.425 r
+  U225/Z (NOR2_C)                         0.084      3.509 f
+  U226/Z (INVERT_E)                       0.062      3.572 r
+  U224/Z (NOR2_C)                         0.084      3.655 f
+  U222/Z (INVERT_E)                       0.070      3.725 r
+  U274/Z (INVERT_H)                       0.038      3.764 f
+  U79/Z (INVERT_H)                        0.050      3.814 r
+  U189/Z (INVERT_K)                       0.046      3.860 f
+  U102/Z (NAND2_E)                        0.060      3.920 r
+  U173/Z (INVERT_H)                       0.048      3.969 f
+  U263/Z (NOR2_C)                         0.088      4.056 r
+  U264/Z (INVERT_E)                       0.057      4.114 f
+  U260/Z (NOR2_C)                         0.089      4.203 r
+  U259/Z (INVERT_E)                       0.062      4.265 f
+  U90/Z (BUFFER_I)                        0.077      4.341 f
+  U89/Z (INVERT_J)                        0.048      4.389 r
+  U258/Z (INVERT_O)                       0.046      4.435 f
+  elevator_open (out)                     0.002      4.438 f
+  data arrival time                                  4.438
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.438
+  -----------------------------------------------------------
+  slack (MET)                                        3.562
+
+
+  Startpoint: state_current_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[1]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[1]/Q (DFFR_E)         0.315      3.315 r
+  U77/Z (INVERT_I)                        0.055      3.370 f
+  U128/Z (INVERT_N)                       0.055      3.425 r
+  U225/Z (NOR2_C)                         0.084      3.509 f
+  U226/Z (INVERT_E)                       0.062      3.572 r
+  U224/Z (NOR2_C)                         0.084      3.655 f
+  U222/Z (INVERT_E)                       0.070      3.725 r
+  U274/Z (INVERT_H)                       0.038      3.764 f
+  U79/Z (INVERT_H)                        0.050      3.814 r
+  U189/Z (INVERT_K)                       0.046      3.860 f
+  U164/Z (AOI22_D)                        0.077      3.938 r
+  U163/Z (INVERT_H)                       0.038      3.976 f
+  U261/Z (NOR2_C)                         0.078      4.054 r
+  U262/Z (INVERT_E)                       0.057      4.111 f
+  U260/Z (NOR2_C)                         0.081      4.193 r
+  U259/Z (INVERT_E)                       0.062      4.254 f
+  U90/Z (BUFFER_I)                        0.077      4.331 f
+  U89/Z (INVERT_J)                        0.048      4.379 r
+  U258/Z (INVERT_O)                       0.046      4.425 f
+  elevator_open (out)                     0.002      4.427 f
+  data arrival time                                  4.427
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.427
+  -----------------------------------------------------------
+  slack (MET)                                        3.573
+
+
+  Startpoint: state_current_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[1]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[1]/Q (DFFR_E)         0.315      3.315 r
+  U77/Z (INVERT_I)                        0.055      3.370 f
+  U128/Z (INVERT_N)                       0.055      3.425 r
+  U256/Z (NOR2_H)                         0.072      3.498 f
+  U247/Z (AO22_H)                         0.138      3.636 f
+  U245/Z (INVERT_E)                       0.055      3.691 r
+  U246/Z (INVERT_F)                       0.054      3.745 f
+  U186/Z (OA21_F)                         0.110      3.855 f
+  U187/Z (INVERT_D)                       0.060      3.915 r
+  U81/Z (INVERT_E)                        0.051      3.966 f
+  U261/Z (NOR2_C)                         0.088      4.054 r
+  U262/Z (INVERT_E)                       0.057      4.111 f
+  U260/Z (NOR2_C)                         0.081      4.192 r
+  U259/Z (INVERT_E)                       0.062      4.254 f
+  U90/Z (BUFFER_I)                        0.077      4.331 f
+  U89/Z (INVERT_J)                        0.048      4.378 r
+  U258/Z (INVERT_O)                       0.046      4.425 f
+  elevator_open (out)                     0.002      4.427 f
+  data arrival time                                  4.427
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.427
+  -----------------------------------------------------------
+  slack (MET)                                        3.573
+
+
+  Startpoint: state_current_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[2]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[2]/Q (DFFR_E)         0.305      3.305 r
+  U229/Z (INVERT_H)                       0.045      3.350 f
+  U230/Z (INVERT_I)                       0.048      3.399 r
+  U280/Z (CLK_Q)                          0.090      3.488 r
+  U231/Z (AND2_I)                         0.065      3.553 r
+  U232/Z (INVERT_F)                       0.046      3.600 f
+  U233/Z (OR2_I)                          0.089      3.688 f
+  U275/Z (INVERT_H)                       0.042      3.731 r
+  U82/Z (INVERT_I)                        0.046      3.777 f
+  U179/Z (INVERT_H)                       0.056      3.833 r
+  U164/Z (AOI22_D)                        0.075      3.908 f
+  U163/Z (INVERT_H)                       0.045      3.953 r
+  U261/Z (NOR2_C)                         0.071      4.024 f
+  U262/Z (INVERT_E)                       0.062      4.086 r
+  U260/Z (NOR2_C)                         0.075      4.160 f
+  U259/Z (INVERT_E)                       0.067      4.227 r
+  U90/Z (BUFFER_I)                        0.064      4.291 r
+  U89/Z (INVERT_J)                        0.041      4.332 f
+  U258/Z (INVERT_O)                       0.051      4.383 r
+  elevator_open (out)                     0.002      4.386 r
+  data arrival time                                  4.386
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.386
+  -----------------------------------------------------------
+  slack (MET)                                        3.614
+
+
+  Startpoint: state_current_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[2]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[2]/Q (DFFR_E)         0.305      3.305 r
+  U229/Z (INVERT_H)                       0.045      3.350 f
+  U230/Z (INVERT_I)                       0.048      3.399 r
+  U280/Z (CLK_Q)                          0.090      3.488 r
+  U231/Z (AND2_I)                         0.065      3.553 r
+  U232/Z (INVERT_F)                       0.046      3.600 f
+  U233/Z (OR2_I)                          0.089      3.688 f
+  U275/Z (INVERT_H)                       0.042      3.731 r
+  U82/Z (INVERT_I)                        0.046      3.777 f
+  U179/Z (INVERT_H)                       0.056      3.833 r
+  U265/Z (NAND2_E)                        0.045      3.878 f
+  U100/Z (INVERT_H)                       0.051      3.929 r
+  U263/Z (NOR2_C)                         0.074      4.002 f
+  U264/Z (INVERT_E)                       0.062      4.065 r
+  U260/Z (NOR2_C)                         0.084      4.149 f
+  U259/Z (INVERT_E)                       0.067      4.215 r
+  U90/Z (BUFFER_I)                        0.064      4.279 r
+  U89/Z (INVERT_J)                        0.041      4.320 f
+  U258/Z (INVERT_O)                       0.051      4.372 r
+  elevator_open (out)                     0.002      4.374 r
+  data arrival time                                  4.374
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.374
+  -----------------------------------------------------------
+  slack (MET)                                        3.626
+
+
+  Startpoint: state_current_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[0]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[0]/Q (DFFR_E)         0.197      3.197 f
+  U273/Z (INVERT_H)                       0.060      3.258 r
+  U241/Z (INVERT_L)                       0.050      3.308 f
+  U278/Z (INVERT_F)                       0.051      3.359 r
+  U104/Z (INVERT_I)                       0.046      3.404 f
+  U270/Z (INVERT_E)                       0.054      3.458 r
+  U231/Z (AND2_I)                         0.072      3.530 r
+  U232/Z (INVERT_F)                       0.046      3.576 f
+  U233/Z (OR2_I)                          0.089      3.665 f
+  U275/Z (INVERT_H)                       0.042      3.707 r
+  U82/Z (INVERT_I)                        0.046      3.754 f
+  U179/Z (INVERT_H)                       0.056      3.809 r
+  U164/Z (AOI22_D)                        0.075      3.884 f
+  U163/Z (INVERT_H)                       0.045      3.930 r
+  U261/Z (NOR2_C)                         0.071      4.000 f
+  U262/Z (INVERT_E)                       0.062      4.062 r
+  U260/Z (NOR2_C)                         0.075      4.137 f
+  U259/Z (INVERT_E)                       0.067      4.203 r
+  U90/Z (BUFFER_I)                        0.064      4.268 r
+  U89/Z (INVERT_J)                        0.041      4.309 f
+  U258/Z (INVERT_O)                       0.051      4.360 r
+  elevator_open (out)                     0.002      4.362 r
+  data arrival time                                  4.362
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.362
+  -----------------------------------------------------------
+  slack (MET)                                        3.638
+
+
+  Startpoint: state_current_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[2]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[2]/Q (DFFR_E)         0.305      3.305 r
+  U229/Z (INVERT_H)                       0.045      3.350 f
+  U230/Z (INVERT_I)                       0.048      3.399 r
+  U280/Z (CLK_Q)                          0.090      3.488 r
+  U247/Z (AO22_H)                         0.100      3.588 r
+  U245/Z (INVERT_E)                       0.051      3.638 f
+  U246/Z (INVERT_F)                       0.059      3.698 r
+  U186/Z (OA21_F)                         0.107      3.804 r
+  U187/Z (INVERT_D)                       0.053      3.857 f
+  U81/Z (INVERT_E)                        0.052      3.910 r
+  U261/Z (NOR2_C)                         0.082      3.992 f
+  U262/Z (INVERT_E)                       0.062      4.054 r
+  U260/Z (NOR2_C)                         0.075      4.129 f
+  U259/Z (INVERT_E)                       0.067      4.195 r
+  U90/Z (BUFFER_I)                        0.064      4.260 r
+  U89/Z (INVERT_J)                        0.041      4.300 f
+  U258/Z (INVERT_O)                       0.051      4.352 r
+  elevator_open (out)                     0.002      4.354 r
+  data arrival time                                  4.354
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.354
+  -----------------------------------------------------------
+  slack (MET)                                        3.646
+
+
+  Startpoint: state_current_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[0]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[0]/Q (DFFR_E)         0.197      3.197 f
+  U273/Z (INVERT_H)                       0.060      3.258 r
+  U241/Z (INVERT_L)                       0.050      3.308 f
+  U278/Z (INVERT_F)                       0.051      3.359 r
+  U104/Z (INVERT_I)                       0.046      3.404 f
+  U270/Z (INVERT_E)                       0.054      3.458 r
+  U231/Z (AND2_I)                         0.072      3.530 r
+  U232/Z (INVERT_F)                       0.046      3.576 f
+  U233/Z (OR2_I)                          0.089      3.665 f
+  U275/Z (INVERT_H)                       0.042      3.707 r
+  U82/Z (INVERT_I)                        0.046      3.754 f
+  U179/Z (INVERT_H)                       0.056      3.809 r
+  U265/Z (NAND2_E)                        0.045      3.855 f
+  U100/Z (INVERT_H)                       0.051      3.905 r
+  U263/Z (NOR2_C)                         0.074      3.979 f
+  U264/Z (INVERT_E)                       0.062      4.041 r
+  U260/Z (NOR2_C)                         0.084      4.125 f
+  U259/Z (INVERT_E)                       0.067      4.192 r
+  U90/Z (BUFFER_I)                        0.064      4.256 r
+  U89/Z (INVERT_J)                        0.041      4.297 f
+  U258/Z (INVERT_O)                       0.051      4.348 r
+  elevator_open (out)                     0.002      4.350 r
+  data arrival time                                  4.350
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.350
+  -----------------------------------------------------------
+  slack (MET)                                        3.650
+
+
+  Startpoint: state_current_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[0]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[0]/Q (DFFR_E)         0.197      3.197 f
+  U273/Z (INVERT_H)                       0.060      3.258 r
+  U241/Z (INVERT_L)                       0.050      3.308 f
+  U278/Z (INVERT_F)                       0.051      3.359 r
+  U104/Z (INVERT_I)                       0.046      3.404 f
+  U271/Z (INVERT_F)                       0.054      3.459 r
+  U247/Z (AO22_H)                         0.123      3.581 r
+  U245/Z (INVERT_E)                       0.051      3.632 f
+  U246/Z (INVERT_F)                       0.059      3.691 r
+  U186/Z (OA21_F)                         0.107      3.798 r
+  U187/Z (INVERT_D)                       0.053      3.851 f
+  U81/Z (INVERT_E)                        0.052      3.903 r
+  U261/Z (NOR2_C)                         0.082      3.986 f
+  U262/Z (INVERT_E)                       0.062      4.048 r
+  U260/Z (NOR2_C)                         0.075      4.122 f
+  U259/Z (INVERT_E)                       0.067      4.189 r
+  U90/Z (BUFFER_I)                        0.064      4.253 r
+  U89/Z (INVERT_J)                        0.041      4.294 f
+  U258/Z (INVERT_O)                       0.051      4.345 r
+  elevator_open (out)                     0.002      4.348 r
+  data arrival time                                  4.348
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.348
+  -----------------------------------------------------------
+  slack (MET)                                        3.652
+
+
+  Startpoint: state_current_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[2]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[2]/Q (DFFR_E)         0.197      3.197 f
+  U229/Z (INVERT_H)                       0.050      3.247 r
+  U230/Z (INVERT_I)                       0.042      3.290 f
+  U280/Z (CLK_Q)                          0.070      3.360 f
+  U256/Z (NOR2_H)                         0.085      3.445 r
+  U247/Z (AO22_H)                         0.130      3.575 r
+  U245/Z (INVERT_E)                       0.051      3.625 f
+  U246/Z (INVERT_F)                       0.059      3.685 r
+  U186/Z (OA21_F)                         0.107      3.791 r
+  U187/Z (INVERT_D)                       0.053      3.844 f
+  U81/Z (INVERT_E)                        0.052      3.897 r
+  U261/Z (NOR2_C)                         0.082      3.979 f
+  U262/Z (INVERT_E)                       0.062      4.041 r
+  U260/Z (NOR2_C)                         0.075      4.116 f
+  U259/Z (INVERT_E)                       0.067      4.182 r
+  U90/Z (BUFFER_I)                        0.064      4.246 r
+  U89/Z (INVERT_J)                        0.041      4.287 f
+  U258/Z (INVERT_O)                       0.051      4.339 r
+  elevator_open (out)                     0.002      4.341 r
+  data arrival time                                  4.341
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.341
+  -----------------------------------------------------------
+  slack (MET)                                        3.659
+
+
+  Startpoint: floor_one_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_6  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_one_button/button_out_reg/CLK (DFFR_E)           0.000      3.000 r
+  floor_one_button/button_out_reg/Q (DFFR_E)             0.315      3.315 r
+  floor_one_button/U6/Z (INVERT_I)                       0.055      3.370 f
+  floor_one_button/U3/Z (INVERT_N)                       0.054      3.424 r
+  floor_one_button/button_out (elevator_button_6)        0.000      3.424 r
+  U97/Z (INVERT_I)                                       0.046      3.470 f
+  U243/Z (AND2_H)                                        0.080      3.550 f
+  U244/Z (INVERT_D)                                      0.056      3.606 r
+  U176/Z (INVERT_E)                                      0.056      3.662 f
+  U242/Z (INVERT_F)                                      0.057      3.719 r
+  U186/Z (OA21_F)                                        0.070      3.789 r
+  U187/Z (INVERT_D)                                      0.053      3.842 f
+  U81/Z (INVERT_E)                                       0.052      3.894 r
+  U261/Z (NOR2_C)                                        0.082      3.976 f
+  U262/Z (INVERT_E)                                      0.062      4.039 r
+  U260/Z (NOR2_C)                                        0.075      4.113 f
+  U259/Z (INVERT_E)                                      0.067      4.180 r
+  U90/Z (BUFFER_I)                                       0.064      4.244 r
+  U89/Z (INVERT_J)                                       0.041      4.285 f
+  U258/Z (INVERT_O)                                      0.051      4.336 r
+  elevator_open (out)                                    0.002      4.338 r
+  data arrival time                                                 4.338
+
+  clock v_clk (rise edge)                               10.000     10.000
+  clock network delay (ideal)                            0.000     10.000
+  output external delay                                 -2.000      8.000
+  data required time                                                8.000
+  --------------------------------------------------------------------------
+  data required time                                                8.000
+  data arrival time                                                -4.338
+  --------------------------------------------------------------------------
+  slack (MET)                                                       3.662
+
+
+  Startpoint: state_current_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[2]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[2]/QBAR (DFFR_E)      0.229      3.229 f
+  U84/Z (INVERT_I)                        0.058      3.287 r
+  U213/Z (INVERT_E)                       0.047      3.334 f
+  U225/Z (NOR2_C)                         0.079      3.414 r
+  U226/Z (INVERT_E)                       0.057      3.471 f
+  U224/Z (NOR2_C)                         0.089      3.560 r
+  U222/Z (INVERT_E)                       0.065      3.626 f
+  U274/Z (INVERT_H)                       0.044      3.670 r
+  U79/Z (INVERT_H)                        0.044      3.714 f
+  U189/Z (INVERT_K)                       0.051      3.765 r
+  U102/Z (NAND2_E)                        0.047      3.812 f
+  U173/Z (INVERT_H)                       0.051      3.862 r
+  U263/Z (NOR2_C)                         0.083      3.945 f
+  U264/Z (INVERT_E)                       0.062      4.007 r
+  U260/Z (NOR2_C)                         0.084      4.091 f
+  U259/Z (INVERT_E)                       0.067      4.158 r
+  U90/Z (BUFFER_I)                        0.064      4.222 r
+  U89/Z (INVERT_J)                        0.041      4.263 f
+  U258/Z (INVERT_O)                       0.051      4.314 r
+  elevator_open (out)                     0.002      4.316 r
+  data arrival time                                  4.316
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.316
+  -----------------------------------------------------------
+  slack (MET)                                        3.684
+
+
+  Startpoint: state_current_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[1]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[1]/Q (DFFR_E)         0.207      3.207 f
+  U77/Z (INVERT_I)                        0.061      3.269 r
+  U128/Z (INVERT_N)                       0.048      3.317 f
+  U225/Z (NOR2_C)                         0.088      3.404 r
+  U226/Z (INVERT_E)                       0.057      3.462 f
+  U224/Z (NOR2_C)                         0.089      3.551 r
+  U222/Z (INVERT_E)                       0.065      3.616 f
+  U274/Z (INVERT_H)                       0.044      3.660 r
+  U79/Z (INVERT_H)                        0.044      3.705 f
+  U189/Z (INVERT_K)                       0.051      3.756 r
+  U102/Z (NAND2_E)                        0.047      3.802 f
+  U173/Z (INVERT_H)                       0.051      3.853 r
+  U263/Z (NOR2_C)                         0.083      3.936 f
+  U264/Z (INVERT_E)                       0.062      3.998 r
+  U260/Z (NOR2_C)                         0.084      4.082 f
+  U259/Z (INVERT_E)                       0.067      4.148 r
+  U90/Z (BUFFER_I)                        0.064      4.213 r
+  U89/Z (INVERT_J)                        0.041      4.253 f
+  U258/Z (INVERT_O)                       0.051      4.305 r
+  elevator_open (out)                     0.002      4.307 r
+  data arrival time                                  4.307
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.307
+  -----------------------------------------------------------
+  slack (MET)                                        3.693
+
+
+  Startpoint: state_current_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[2]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[2]/QBAR (DFFR_E)      0.229      3.229 f
+  U84/Z (INVERT_I)                        0.058      3.287 r
+  U213/Z (INVERT_E)                       0.047      3.334 f
+  U225/Z (NOR2_C)                         0.079      3.414 r
+  U226/Z (INVERT_E)                       0.057      3.471 f
+  U224/Z (NOR2_C)                         0.089      3.560 r
+  U222/Z (INVERT_E)                       0.065      3.626 f
+  U274/Z (INVERT_H)                       0.044      3.670 r
+  U79/Z (INVERT_H)                        0.044      3.714 f
+  U189/Z (INVERT_K)                       0.051      3.765 r
+  U164/Z (AOI22_D)                        0.061      3.826 f
+  U163/Z (INVERT_H)                       0.045      3.871 r
+  U261/Z (NOR2_C)                         0.071      3.942 f
+  U262/Z (INVERT_E)                       0.062      4.004 r
+  U260/Z (NOR2_C)                         0.075      4.079 f
+  U259/Z (INVERT_E)                       0.067      4.145 r
+  U90/Z (BUFFER_I)                        0.064      4.210 r
+  U89/Z (INVERT_J)                        0.041      4.250 f
+  U258/Z (INVERT_O)                       0.051      4.302 r
+  elevator_open (out)                     0.002      4.304 r
+  data arrival time                                  4.304
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.304
+  -----------------------------------------------------------
+  slack (MET)                                        3.696
+
+
+  Startpoint: state_current_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                   0.000      0.000
+  clock network delay (ideal)             3.000      3.000
+  state_current_reg[0]/CLK (DFFR_E)       0.000      3.000 r
+  state_current_reg[0]/Q (DFFR_E)         0.305      3.305 r
+  U273/Z (INVERT_H)                       0.055      3.360 f
+  U241/Z (INVERT_L)                       0.056      3.416 r
+  U223/Z (INVERT_E)                       0.049      3.465 f
+  U224/Z (NOR2_C)                         0.079      3.544 r
+  U222/Z (INVERT_E)                       0.065      3.609 f
+  U274/Z (INVERT_H)                       0.044      3.653 r
+  U79/Z (INVERT_H)                        0.044      3.698 f
+  U189/Z (INVERT_K)                       0.051      3.749 r
+  U102/Z (NAND2_E)                        0.047      3.795 f
+  U173/Z (INVERT_H)                       0.051      3.846 r
+  U263/Z (NOR2_C)                         0.083      3.929 f
+  U264/Z (INVERT_E)                       0.062      3.991 r
+  U260/Z (NOR2_C)                         0.084      4.075 f
+  U259/Z (INVERT_E)                       0.067      4.141 r
+  U90/Z (BUFFER_I)                        0.064      4.206 r
+  U89/Z (INVERT_J)                        0.041      4.246 f
+  U258/Z (INVERT_O)                       0.051      4.298 r
+  elevator_open (out)                     0.002      4.300 r
+  data arrival time                                  4.300
+
+  clock v_clk (rise edge)                10.000     10.000
+  clock network delay (ideal)             0.000     10.000
+  output external delay                  -2.000      8.000
+  data required time                                 8.000
+  -----------------------------------------------------------
+  data required time                                 8.000
+  data arrival time                                 -4.300
+  -----------------------------------------------------------
+  slack (MET)                                        3.700
+
+
+  Startpoint: floor_one_button/button_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: elevator_open
+            (output port clocked by v_clk)
+  Path Group: v_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  elevator_fsm       500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+  elevator_button_6  500K_CELLS_6LMC4A     IBM_CMOS8HP_SS125
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  0.000      0.000
+  clock network delay (ideal)                            3.000      3.000
+  floor_one_button/button_out_reg/CLK (DFFR_E)           0.000      3.000 r
+  floor_one_button/button_out_reg/Q (DFFR_E)             0.207      3.207 f
+  floor_one_button/U6/Z (INVERT_I)                       0.061      3.269 r
+  floor_one_button/U3/Z (INVERT_N)                       0.047      3.315 f
+  floor_one_button/button_out (elevator_button_6)        0.000      3.315 f
+  U97/Z (INVERT_I)                                       0.051      3.366 r
+  U243/Z (AND2_H)                                        0.072      3.438 r
+  U244/Z (INVERT_D)                                      0.050      3.488 f
+  U176/Z (INVERT_E)                                      0.057      3.545 r
+  U242/Z (INVERT_F)                                      0.052      3.597 f
+  U186/Z (OA21_F)                                        0.127      3.724 f
+  U187/Z (INVERT_D)                                      0.060      3.784 r
+  U81/Z (INVERT_E)                                       0.051      3.835 f
+  U261/Z (NOR2_C)                                        0.088      3.923 r
+  U262/Z (INVERT_E)                                      0.057      3.981 f
+  U260/Z (NOR2_C)                                        0.081      4.062 r
+  U259/Z (INVERT_E)                                      0.062      4.124 f
+  U90/Z (BUFFER_I)                                       0.077      4.200 f
+  U89/Z (INVERT_J)                                       0.048      4.248 r
+  U258/Z (INVERT_O)                                      0.046      4.294 f
+  elevator_open (out)                                    0.002      4.297 f
+  data arrival time                                                 4.297
+
+  clock v_clk (rise edge)                               10.000     10.000
+  clock network delay (ideal)                            0.000     10.000
+  output external delay                                 -2.000      8.000
+  data required time                                                8.000
+  --------------------------------------------------------------------------
+  data required time                                                8.000
+  data arrival time                                                -4.297
+  --------------------------------------------------------------------------
+  slack (MET)                                                       3.703
+
+
+1
